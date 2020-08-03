@@ -1,0 +1,8 @@
+webdriver_manager==2.5.3
+selenium==3.141.0
+requests==2.23.0
+schedule==0.6.0
+selenium==3.141.0
+virtualenv==20.0.21
+webdriver-manager==2.5.3
+webencodings==0.5.1
