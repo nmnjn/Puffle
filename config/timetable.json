@@ -1,0 +1,51 @@
+{
+    "Monday": [
+        {
+            "team": "EOM 7th sem CSE A and B (Essentials of Management, HUM 4001)",
+            "channel": "General",
+            "time": "17:00",
+            "duration": 100
+        }
+    ],
+    "Tuesday": [
+        {
+            "team": "Team",
+            "channel": "General",
+            "time": "12:00",
+            "duration": 120
+        }
+    ],
+    "Wednesday": [
+        {
+            "team": "Team",
+            "channel": "General",
+            "time": "12:00",
+            "duration": 120
+        }
+    ],
+    "Thursday": [
+        {
+            "team": "Team",
+            "channel": "General",
+            "time": "12:00",
+            "duration": 120
+        }
+    ],
+    "Friday": [
+        {
+            "team": "Team",
+            "channel": "General",
+            "time": "12:00",
+            "duration": 120
+        }
+    ],
+    "Saturday": [
+        {
+            "team": "Team",
+            "channel": "General",
+            "time": "12:00",
+            "duration": 120
+        }
+    ]
+  }
+  

@@ -1,0 +1,12 @@
+{
+  "email": "",
+  "password": "",
+  "random_delay": false,
+
+  "email-notification": true,
+  "p-email": "",
+  "phone-notification": false,
+  "phone": ""
+}
+
+
