@@ -168,6 +168,15 @@ def wait_till_found(sel, timeout):
         print("Timeout waiting for element.")
         return None
 
+def wait_till_clickable(sel, timeout):
+    try:
+        element_present = EC.element_to_be_clickable((By.CSS_SELECTOR, sel))
+        WebDriverWait(browser, timeout).until(element_present)
+        return browser.find_element_by_css_selector(sel)
+    except exceptions.TimeoutException:
+        print("Timeout waiting for element.")
+        return None
+
 
 def get_teams():
     # find all team names
@@ -282,8 +291,8 @@ def join_meeting(subject):
 
     if meeting_team is None:
         print("No meeting found to join.")
-        send_email(False, subject['channel'], subject['team'])
-        send_message(False, subject['channel'], subject['team'])
+        send_email("fail", subject['channel'], subject['team'])
+        send_message("fail", subject['channel'], subject['team'])
         return False
 
     hangup()
@@ -294,11 +303,11 @@ def join_meeting(subject):
 
     print(meeting_to_join.id)
 
-    join_btn = wait_till_found(f"button[track-data*='{meeting_to_join.id}']", 30)
+    join_btn = wait_till_found(f"button[data-tid='join-btn-{meeting_to_join.id}']", 60)
     if join_btn is None:
         print("unable to join meeting..")
-        send_email(False, subject['channel'], subject['team'])
-        send_message(False, subject['channel'], subject['team'])
+        send_email("fail", subject['channel'], subject['team'])
+        send_message("fail", subject['channel'], subject['team'])
         return False
 
     join_btn.click()
@@ -306,8 +315,8 @@ def join_meeting(subject):
     join_now_btn = wait_till_found("button[data-tid='prejoin-join-button']", 30)
     if join_now_btn is None:
         print("unable to join meeting..")
-        send_email(False, subject['channel'], subject['team'])
-        send_message(False, subject['channel'], subject['team'])
+        send_email("fail", subject['channel'], subject['team'])
+        send_message("fail", subject['channel'], subject['team'])
         return False
 
     # turn camera off
@@ -332,8 +341,8 @@ def join_meeting(subject):
     if join_now_btn is None:
         print("unable to join meeting..")
         print("Unable to find the join button..")
-        send_email(False, subject['channel'], subject['team'])
-        send_message(False, subject['channel'], subject['team'])
+        send_email("fail", subject['channel'], subject['team'])
+        send_message("fail", subject['channel'], subject['team'])
         return False
 
     join_now_btn.click()
@@ -343,8 +352,8 @@ def join_meeting(subject):
     active_meeting = meeting_to_join
 
     print("Joined " + subject['team'] + " - " + subject['channel'])
-    send_email(True, subject['channel'], subject['team'])
-    send_message(True, subject['channel'], subject['team'])
+    send_email("success", subject['channel'], subject['team'])
+    send_message("success", subject['channel'], subject['team'])
 
     if subject['duration'] > 0:
         hangup_thread = Timer(subject['duration']*60, hangup)
