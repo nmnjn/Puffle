@@ -2,20 +2,9 @@
 
 Puffle is a python application to automatically connect to the Microsoft Teams Meetings according to your timetable.
 
-## Getting started 📦
+# Getting started 📦
 
-**Puffle** is written in Python3. If you have a python environment installed and know your way around the command line, feel free to check out the source code [here](https://github.com/nmnjn/Puffle).
-
-For some easy usage, I have compiled the binaries for each operating system.
-
-- MacOS [(Download Here)](https://github.com/nmnjn/Puffle/raw/master/release/puffle_macos_v1.1.zip)
-- Linux [(Download Here)](https://github.com/nmnjn/Puffle/raw/master/release/puffle_linux_v1.1.zip)
-- ~~Windows~~ (Coming Soon)
-
-After you have downloaded the zip file, unzip and navigate to the directory using the command line. Here you will find two items:
-
-1. The application binary.
-2. A configs folder which will contain your information and timetable.
+### Download the source code from [here](https://github.com/nmnjn/Puffle/archive/master.zip) and navigate to the project directory.
 
 ## Step 1: Editing the configuration 👨🏻‍💻
 
@@ -23,7 +12,6 @@ After you have downloaded the zip file, unzip and navigate to the directory usin
 
 - email → this is the email with which you will log into MS teams.
 - password → this is the password to your account. (Don't worry, the password is safe as it is only kept on your device as long as the application is running)
-- random_delay → set this as `true` if you want to have some random delay while connecting to the meetings.
 - email-notification → set this as `true` to get a **mail** when Puffle joins your meetings. It is recommended to keep this as `true` so that you're also informed in case Puffle gets an error and is not able to join the meeting.
 - p-email → this is your primary email on which you will receive the alerts from Puffle.
 - phone-notification → set this as `true` to get a **text message** when Puffle joins your meetings. By default, this is set to `false` and it is only available to subscribed users. More about this later.
@@ -35,7 +23,6 @@ After you have downloaded the zip file, unzip and navigate to the directory usin
 {
   "email": "naman.jain5@learner.manipal.edu",
   "password": "********",
-  "random_delay": false,
 
   "email-notification": true,
   "p-email": "naman17@gmail.com",
@@ -148,12 +135,24 @@ After you have successfully edited and verified the `config.json` and `timetable
 
 ### Method 1
 
-- Download the source code
-- Navigate to the directory and set up a local python3 enviroment
+- Set up a local Python3 virtual environment
 - Install the requirements : `pip install -r requirements.txt`
-- Follow the above steps to setup your app and run the application by `python app.py`
+- Run the application by `python app.py`
 
-### Method 2 (Recommended)
+### Method 2
+
+For some easy usage, I have compiled the binaries for each operating system.
+
+You can find them in the release folder or download them from here:
+
+- MacOS [(Download Here)](https://github.com/nmnjn/Puffle/raw/master/release/puffle_macos_v1.1.zip)
+- Linux [(Download Here)](https://github.com/nmnjn/Puffle/raw/master/release/puffle_linux_v1.1.zip)
+- Windows (Coming Soon)
+
+After you have downloaded the zip file, unzip and navigate to the directory using the command line. Here you will find two items:
+
+1. The application binary.
+2. A configs folder which will contain your information and timetable (like the above steps).
 
 In a unix environment, navigate to the project directory from the command line.
 
@@ -161,6 +160,10 @@ In a unix environment, navigate to the project directory from the command line.
 2. Then run the application by `./app`
 
 Voila ✨
+
+**Puffle** is written in Python3. If you have a python environment installed and know your way around the command line, feel free to check out the source code [here](https://github.com/nmnjn/Puffle) and give it a star 🌟.
+
+This project is heavily inspired from [Teams-Auto-Joiner by TobiasPankner.](https://github.com/TobiasPankner/Teams-Auto-Joiner)
 
 ---
 
@@ -210,12 +213,8 @@ I am working to get this on windows as fast as possible.
 
 # Important 🚨
 
-This is just a fun weekend project and I do not expect it to work 100%. 
+This is just a fun weekend project and I do not expect it to work 100%. I built this to ease my life. 
 
-Although unlikely, there may be issues due to large use cases and very limited testing cases. 
+I would also like to state that this is just to showcase the extent of some automation capability with Python. I *do not* condone blowing off your classes and will not be responsible for any repercussions you face.
 
-**In case you miss any classes, due to some error in setting up the system or the application not performing as intended, I will not be responsible for it.** 
-
-# Shoutout ✨
-
-This project is heavily inspired from [Teams-Auto-Joiner by TobiasPankner](https://github.com/TobiasPankner/Teams-Auto-Joiner).
+**In case you miss any classes, due to some error in setting up the system or the application not performing as intended, I will not be responsible for it.**
