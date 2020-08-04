@@ -173,8 +173,6 @@ If you would like to receive alerts and updates on your phone, [please reach out
 
 Alternatively I have set up a system to send a mail to your primary account, which does not have any cost associated to it. 
 
-If you're wondering how much the subscription costs, then you will be surprised to know, it just **Rs. 149 for the entire semester**. Yes, that's cheaper than a single meal. If you end up subscribing, not only will you help me cover the cost but you will also support me for the work I do! 
-
 ---
 
 # Troubleshooting 🛠
